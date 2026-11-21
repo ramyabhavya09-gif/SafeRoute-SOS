@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute SOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">🛡️ SafeRoute SOS</div>
+        <p>Emergency Assistance & Personal Safety</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Emergency SOS -->
+        <section class="hero">
+            <h1>Emergency Assistance</h1>
+            <p>Get help quickly when you need it.</p>
+
+            <button class="sos-button" onclick="activateSOS()">
+                SOS
+            </button>
+
+            <p id="status">System Ready</p>
+        </section>
+
+        <!-- Location -->
+        <section class="card">
+            <h2>📍 Your Location</h2>
+
+            <p id="location">
+                Your location has not been detected.
+            </p>
+
+            <button class="primary-button" onclick="getLocation()">
+                Detect My Location
+            </button>
+
+            <button class="secondary-button" onclick="openMap()">
+                View on Map
+            </button>
+        </section>
+
+        <!-- Emergency Type -->
+        <section class="card">
+            <h2>🚨 Emergency Details</h2>
+
+            <label for="emergencyType">Select Emergency Type</label>
+
+            <select id="emergencyType">
+                <option value="General Emergency">General Emergency</option>
+                <option value="Medical Emergency">Medical Emergency</option>
+                <option value="Road Accident">Road Accident</option>
+                <option value="Fire Emergency">Fire Emergency</option>
+                <option value="Personal Safety">Personal Safety</option>
+            </select>
+
+            <button class="primary-button" onclick="shareAlert()">
+                Share Emergency Alert
+            </button>
+
+            <button class="secondary-button" onclick="copyAlert()">
+                Copy Alert Message
+            </button>
+        </section>
+
+        <!-- Emergency Services -->
+        <section class="card">
+            <h2>🏥 Emergency Services</h2>
+
+            <button class="primary-button" onclick="findHospitals()">
+                Find Nearby Hospitals
+            </button>
+
+            <button class="primary-button" onclick="findPolice()">
+                Find Nearby Police Stations
+            </button>
+
+            <a href="tel:112" class="call-button">
+                📞 Call Emergency Number 112
+            </a>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="card">
+            <h2>👤 Emergency Contact</h2>
+
+            <input type="text" id="contactName"
+                   placeholder="Contact Name">
+
+            <input type="tel" id="contactNumber"
+                   placeholder="Contact Phone Number">
+
+            <button class="primary-button" onclick="saveContact()">
+                Save Contact
+            </button>
+
+            <button class="secondary-button" onclick="sendToContact()">
+                Prepare Emergency SMS
+            </button>
+
+            <p id="contactStatus"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SafeRoute SOS | Hackwarts 2026</p>
+        <p>Safety • Assistance • Awareness</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
